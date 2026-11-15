@@ -20,6 +20,11 @@ module('Unit | Utility | external-plugin-helpers', function () {
         'keymgmt',
         'maps vault-plugin-secrets-keymgmt to keymgmt'
       );
+      assert.strictEqual(
+        EXTERNAL_PLUGIN_TO_BUILTIN_MAP['vault-plugin-secrets-ibmcloud'],
+        'ibmcloud',
+        'maps vault-plugin-secrets-ibmcloud to ibmcloud'
+      );
     });
 
     test('it is a constant record', function (assert) {

@@ -34,6 +34,7 @@ const (
 	SecretEngineConsul        = "consul"
 	SecretEngineGCP           = "gcp"
 	SecretEngineGCPKMS        = "gcpkms"
+	SecretEngineIBMCloud      = "ibmcloud"
 	SecretEngineKubernetes    = "kubernetes"
 	SecretEngineMongoDB       = "mongodb"
 	SecretEngineMongoDBAtlas  = "mongodbatlas"

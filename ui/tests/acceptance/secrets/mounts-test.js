@@ -296,6 +296,23 @@ module('Acceptance | secrets-engines/enable', function (hooks) {
     await runCmd(`delete sys/mounts/${enginePath}`);
   });
 
+  test('enable ibmcloud', async function (assert) {
+    const enginePath = `ibmcloud-${this.uid}`;
+    await mountSecrets.visit();
+    await mountBackend('ibmcloud', enginePath, true);
+
+    assert.strictEqual(
+      currentRouteName(),
+      'vault.cluster.secrets.backend.configuration.general-settings',
+      'redirects to the configuration page'
+    );
+    assert
+      .dom(GENERAL.hdsPageHeaderTitle)
+      .hasText(`${enginePath} configuration`, 'shows the correct page header title');
+    // cleanup
+    await runCmd(`delete sys/mounts/${enginePath}`);
+  });
+
   module('WIF secret engines', function () {
     test('it sets identity_token_key on mount config using search select list, resets after', async function (assert) {
       // create an oidc/key

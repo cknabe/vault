@@ -377,6 +377,7 @@ func TestPredict_Plugins(t *testing.T) {
 				"gcpkms",
 				"github",
 				"hana-database-plugin",
+				"ibmcloud",
 				"influxdb-database-plugin",
 				"jwt",
 				"kerberos",

@@ -51,6 +51,7 @@ module('Unit | Utility | to-sentence-case', function () {
       assert.strictEqual(toSentenceCase('approle'), 'AppRole');
       assert.strictEqual(toSentenceCase('alicloud_dynamic'), 'AliCloud dynamic');
       assert.strictEqual(toSentenceCase('github_auth'), 'GitHub auth');
+      assert.strictEqual(toSentenceCase('ibmcloud'), 'IBM Cloud');
       assert.strictEqual(toSentenceCase('rabbitmq'), 'RabbitMQ');
     });
 
