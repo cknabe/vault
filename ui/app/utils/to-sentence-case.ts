@@ -35,6 +35,7 @@ const WORD_OVERRIDES: Record<string, string> = {
   alicloud: 'AliCloud',
   approle: 'AppRole',
   github: 'GitHub',
+  ibmcloud: 'IBM Cloud',
   rabbitmq: 'RabbitMQ',
 };
 

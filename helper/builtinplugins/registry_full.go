@@ -37,6 +37,7 @@ import (
 	credRadius "github.com/hashicorp/vault/builtin/credential/radius"
 	logicalAws "github.com/hashicorp/vault/builtin/logical/aws"
 	logicalConsul "github.com/hashicorp/vault/builtin/logical/consul"
+	logicalIBMCloud "github.com/hashicorp/vault/builtin/logical/ibmcloud"
 	logicalNomad "github.com/hashicorp/vault/builtin/logical/nomad"
 	logicalRabbit "github.com/hashicorp/vault/builtin/logical/rabbitmq"
 	logicalTotp "github.com/hashicorp/vault/builtin/logical/totp"
@@ -113,6 +114,7 @@ func newFullAddonRegistry() *registry {
 			pluginconsts.SecretEngineConsul:     {Factory: logicalConsul.Factory},
 			pluginconsts.SecretEngineGCP:        {Factory: logicalGcp.Factory},
 			pluginconsts.SecretEngineGCPKMS:     {Factory: logicalGcpKms.Factory},
+			pluginconsts.SecretEngineIBMCloud:   {Factory: logicalIBMCloud.Factory},
 			pluginconsts.SecretEngineKubernetes: {Factory: logicalKube.Factory},
 			pluginconsts.SecretEngineMongoDB: {
 				Factory:           removedFactory,

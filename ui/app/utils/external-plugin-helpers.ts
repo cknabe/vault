@@ -23,6 +23,7 @@ export const EXTERNAL_PLUGIN_TO_BUILTIN_MAP: Record<string, string> = {
   'vault-plugin-secrets-azure': 'azure',
   'vault-plugin-secrets-gcp': 'gcp',
   'vault-plugin-secrets-gcpkms': 'gcpkms',
+  'vault-plugin-secrets-ibmcloud': 'ibmcloud',
   'vault-plugin-secrets-keymgmt': 'keymgmt',
   'vault-plugin-secrets-kubernetes': 'kubernetes',
   'vault-plugin-secrets-kv': 'kv',

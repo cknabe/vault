@@ -209,6 +209,18 @@ export const ALL_ENGINES: EngineDisplayData[] = [
     secretTypes: ['encryptionKeys'],
   },
   {
+    category: 'cloud and infrastructure',
+    pluginCategory: 'cloud',
+    displayName: 'IBM Cloud',
+    glyph: 'cloud',
+    isOnlyMountable: true,
+    mountCategory: ['secret'],
+    type: 'ibmcloud',
+    capabilities: ['dynamic', 'rotating'],
+    description: 'Generate dynamic IBM Cloud IAM service IDs and API keys',
+    secretTypes: ['cloudCredentials', 'apiKeysTokens'],
+  },
+  {
     pluginCategory: 'generic',
     displayName: 'JWT',
     glyph: 'jwt',

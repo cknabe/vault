@@ -47,6 +47,11 @@ module('Unit | Helper | exit-configuration-route', function () {
     assert.strictEqual(result, 'vault.cluster.secrets.backends');
   });
 
+  test('ibmcloud returns backends route (isOnlyMountable)', function (assert) {
+    const result = exitConfigurationRoute('ibmcloud');
+    assert.strictEqual(result, 'vault.cluster.secrets.backends');
+  });
+
   test('kv with no version (defaults to v1) returns list-root', function (assert) {
     const result = exitConfigurationRoute('kv');
     assert.strictEqual(result, 'vault.cluster.secrets.backend.list-root');
